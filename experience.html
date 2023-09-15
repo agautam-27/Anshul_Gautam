@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshul Gautam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="assets/icons8-coding-96 (1).png" type="image/x-icon">
+</head>
+
+<body>
+    <nav id="nav">
+        <!-- <div class="logo"><img src="assets/anshulogo.png" alt=""></div> -->
+        <div class="logo">
+            <video autoplay loop muted>
+                <source src="./assets/AnshulLogo(blkBK).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div>
+            <ul class="menu">
+                <li><a href="index.html" class="custom-link">Home</a></li>
+                <li><a href="index.html#about" class="custom-link">About</a></li>
+                <li><a href="experience.html" class="custom-link">Experience</a></li>
+                <li><a href="projects.html" class="custom-link">Projects</a></li>
+                <li><a href="index.html#contact" class="custom-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="mobile-nav">
+        <div class="logo">Anshul Gautam</div>
+        <div class="mobile-menu">
+            <div class="icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="experience.html" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+        <p class="profile-textp1" id="toptext"> Explore My</p>
+        <h1 class="title">Skills</h1>
+        <marquee behavior="scroll" direction="left" class="scrolling-banner" id="scrolling-banner">
+            Java -- HTML -- CSS -- JavaScript -- NodeJs -- SQL -- Firebase -- MongoDb
+        </marquee>
+      
+    <section id="skill-carousel">
+        <div class="carousel_container">
+            <div class="slide active">
+                <img src="./assets/java_logonew.png" alt="">
+            </div>
+            <div class="slide next">
+                <img src="./assets/js.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/CssLogo.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/HtmlLogo.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/GitLogo.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/node.png" alt="">
+            </div>
+            <div class="slide prev">
+                <img src="./assets/SqlLogo.png" alt="">
+            </div>
+            <div class="button-container">
+                <div id="left" class="button"><i class="fa fa-angle-left"></i></div>
+                <div id="right" class="button"><i class="fa fa-angle-right"></i></div>
+            </div>
+        </div>
+    </section>
+ <header>
+    <h1 class="title">Currently Studying</h1>
+</header>
+<section class="skills-section">
+    <div class="skill">
+        <img src="assets/C.png" alt="Skill 1">
+        <h2>Programming C</h2>
+        <p>Learning from BCIT</p>
+    </div>
+    <div class="skill">
+        <img src="assets/react.png" alt="Skill 2">
+        <h2>React</h2>
+        <p>Learning Myself</p>
+    </div>
+    <div class="skill">
+        <img src="assets/python.png" alt="Skill 3">
+        <h2>Python</h2>
+        <p>Learning Myself</p>
+    </div>
+    <div class="skill">
+        <img src="assets/javaoop.png" alt="Skill 3">
+        <h2>Java OOP</h2>
+        <p>Learning from BCIT</p>
+    </div>
+</section>
+<footer>
+    <nav>
+        <div class="menu-container">
+            <ul class="menu">
+                <li><a href="index.html#about" class="custom-link">About</a></li>
+                <li><a href="experience.html" class="custom-link">Experience</a></li>
+                <li><a href="projects.html" class="custom-link">Projects</a></li>
+                <li><a href="index.html#contact" class="custom-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <p>Copyright &#169; 2023 Anshul Gautam. All Rights Reserved.</p>
+</footer>
+    <script src="script.js"></script>
+    <script src="stars.js"></script>
+</body>
+
+</html>

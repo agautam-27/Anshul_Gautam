@@ -1,0 +1,190 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshul Gautam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="assets/icons8-coding-96 (1).png" type="image/x-icon">
+
+
+</head>
+
+<body>
+    <nav id="nav">
+        <!-- <div class="logo"><img src="assets/anshulogo.png" alt=""></div> -->
+        <div class="logo">
+            <video autoplay loop muted>
+                <source src="./assets/AnshulLogo(blkBK).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div>
+            <ul class="menu">
+                <li><a href="index.html" class="custom-link">Home</a></li>
+                <li><a href="#about" class="custom-link">About</a></li>
+                <li><a href="experience.html" class="custom-link">Experience</a></li>
+                <li><a href="projects.html" class="custom-link">Projects</a></li>
+                <li><a href="#contact" class="custom-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="mobile-nav">
+        <div class="logo">Anshul Gautam</div>
+        <div class="mobile-menu">
+            <div class="icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="experience.html" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="profile-pic">
+            <img src="./assets/profile1.1.png" alt="Anshul Gautam Profile picture ">
+        </div>
+        <div class="profile-text">
+            <p class="profile-textp1">Hello, I'm</p>
+            <h1 class="title" id="auto-typing" style="color: red;"></h1>
+            <p class="profile-textp2">Developer</p>
+            <div class="buttons">
+                <button class="resumebtn" onclick="window.open('./assets/Anshul-Gautam-resume.pdf')">Resume</button>
+                <button class="contactbtn" onclick="location.href='./#contact'">Contact Me</button>
+            </div>
+            <div id="social-links">
+                <img src="./assets/linkdeln.png" alt="my linkdeln profile" class="social-icons"
+                    onclick="location.href='https://www.linkedin.com/in/anshulgautam9/'">
+                <img src="./assets/github.png" alt="my github profile" class="social-icons"
+                    onclick="location.href='https://github.com/agautam-27'">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="profile-textp1">Get to Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="profile-pic2">
+                <img src="./assets/profilepick.png" alt="mypicture" class="aboutme-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="text-container">
+                    <p>
+                        I'm currently enrolled in the Computer Systems Technology program at BCIT, where I'm gaining
+                        knowledge in the world of technology. I love photography which leads me to try flying drones and
+                        capture stunning aerial shots, and when I'm not behind the camera, I'm either cycling or playing
+                        my guitar.
+                    </p>
+                </div>
+                <div class="aboutme-container">
+
+                    <div class="details-container" id="ctabtn">
+                        <img src="./assets/exp.png" alt="Experience icon" class="social-icons" />
+                        <h3>Experience/Skills</h3>
+                        <p>2+ years <br /> Developer</p>
+                        <a href="experience.html">
+                            <button class="arrow-button">Learn more<span class="arrow"></span>
+                            </button></a>
+
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="Experience icon" class="social-icons" />
+                        <h3>Education</h3>
+                        <p>Computer Systems Technology Diploma(ongoing)<br />Advanced Software Development Associate
+                            Certificate<br /> Applied Computer Information Systems Associate Certificate</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact1">
+        <div class="title-container">
+            <p class="profile-textp1">Get in Touch</p>
+            <h1 class="title">Contact Me</h1>
+        </div>
+        <div class="section-containers">
+
+            <div class="section-container1">
+                <!-- <h2 class="title">Message Me</h2> -->
+                <!-- Contact Form -->
+                <div class="form-container">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" placeholder="Full Name" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" placeholder="example@.com" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" placeholder="Please type your message here......." name="message"
+                                rows="4" required></textarea>
+                        </div>
+                    </form>
+                    <div class="form-group">
+                        <button type="submit" class="projectsbtn1">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section-container2">
+                <!-- <h3 class="title">Hello</h3> -->
+                <div class="wrapper">
+                    <a href="https://www.linkedin.com/in/anshulgautam9/">
+                        <div class="icon linkdeln">
+                            <div class="tooltip">LinkedIn</div>
+                            <span><i class="fa fa-linkedin"></i></span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/agautam-27">
+                        <div class="icon github">
+                            <div class="tooltip">Github</div>
+                            <span><i class="fa fa-github"></i></span>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/anshul_g27?igshid=NGVhN2U2NjQ0Yg==">
+                        <div class="icon instagram">
+                            <div class="tooltip">Instagram</div>
+                            <span><i class="fa fa-instagram"></i></span>
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCEOK5oXJsee6fe6n8siHZMw">
+                        <div class="icon youtube">
+                            <div class="tooltip">Youtube</div>
+                            <span><i class="fa fa-youtube"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="menu-container">
+                <ul class="menu">
+                    <li><a href="index.html#about" class="custom-link">About</a></li>
+                    <li><a href="experience.html" class="custom-link">Experience</a></li>
+                    <li><a href="projects.html" class="custom-link">Projects</a></li>
+                    <li><a href="index.html#contact" class="custom-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2023 Anshul Gautam. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="stars.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1181 @@
+/* Genereal Styling */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300;400;500;600&family=Raleway:wght@600&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+
+/* *Styling the whole page */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+/* ************ */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(6, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* White stars */
+.star-white {
+    position: fixed;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0; /* White stars start as invisible */
+    animation: blink 3s infinite alternate; /* Blinking animation */
+    /* z-index: -1;  */
+}
+
+/* Colored stars */
+.star-colored {
+    position: fixed;
+    background-color: rgb(214, 240, 212); /* Change this to the desired color */
+    border-radius: 50%;
+    opacity: 3; /* Colored stars start as visible */
+    animation: fadeOut 3s infinite alternate; /* Fading animation */
+    /* z-index: -1; */
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0; /* Fully transparent */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        opacity: 0; /* Fully transparent */
+    }
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* * Transition */
+
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+/* * Navbar CSS */
+
+nav,
+.menu {
+    display: flex;
+}
+
+/* nav img {
+    margin-top: 10%;
+} */
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.menu {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.custom-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-decoration-color: wheat;
+}
+
+.custom-link:hover {
+    color: #0b5380;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+
+.logo {
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* *Responsive Hamburger Menu */
+
+#mobile-nav {
+    display: none;
+}
+
+.mobile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.icon span {
+    width: 100%;
+    height: 5px;
+    background-color: darkgreen;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.icon span:first-child {
+    transform: none;
+}
+
+.icon span:first-child {
+    opacity: 1;
+}
+
+.icon span:first-child {
+    transform: none;
+}
+
+
+/* *SECTIONS */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/* * profile section */
+
+#profile {
+    display: flex;
+    justify-self: center;
+    gap: 5rem;
+    /* margin-top: 12%; */
+    height: 80vh;
+    background: linear-gradient(to bottom, black 30%, rgb(19, 19, 19) 20%, rgb(47, 41, 41) 50%);
+}
+
+.profile-pic {
+    display: flex;
+    height: 600px;
+    width: 500px;
+    margin: auto 0;
+}
+
+
+.profile-text p {
+    font-weight: 600;
+}
+
+.profile-text {
+    /* margin: 15%; */
+    align-self: center;
+    text-align: center;
+}
+
+.profile-textp1 {
+    text-align: center;
+    color: white;
+}
+
+#toptext {
+    margin-top: 2%;
+}
+
+.profile-textp2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    color: #0077b5;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* * SOCIAL ICONS */
+
+.social-icons {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    /* Add width to maintain aspect ratio */
+    transition: all 0.3s ease;
+    margin: 0.1rem;
+    /* Add some spacing between icons */
+}
+
+.social-icons:hover {
+    height: 3rem;
+    width: 3rem;
+    /* Scale both width and height */
+    /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); */
+    transform: translateY(-4px);
+    /* Lift the icon slightly */
+}
+
+
+/* * BUTTONS */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.resumebtn,
+.contactbtn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.resumebtn,
+.contactbtn {
+    border: darkblue 0.1rem solid;
+}
+
+.resumebtn:hover,
+.contactbtn:hover {
+    cursor: pointer;
+}
+
+.resumebtn:hover {
+    background-color: rgb(8, 69, 122);
+    color: snow;
+}
+
+.contactbtn {
+    background: none;
+}
+
+.contactbtn:hover {
+    background-color: rgb(24, 103, 173);
+    color: snow;
+}
+
+/* * ABOUT SECTION */
+
+#about {
+    position: relative;
+    height: 80vh;
+}
+
+
+.aboutme-container {
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    /* background-color: red; */
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5rem;
+}
+
+.aboutme-container,
+.about-details-container {
+    display: flex;
+}
+
+.aboutme-pic {
+    border-radius: 2rem;
+}
+
+.details-container {
+    padding: 0.1rem;
+    flex: 1;
+    border-radius: 20px;
+    border: 0.5px solid transparent;
+    border-image: linear-gradient(0deg, #f06, #00f);
+    border-image-slice: 1;
+    animation: moveBorder 2s linear infinite;
+    text-align: center;
+}
+
+@keyframes moveBorder {
+    0% {
+        border-image-source: linear-gradient(90deg, #f06, #00f);
+    }
+    100% {
+        border-image-source: linear-gradient(90deg, #00f, #f06);
+    }
+}
+
+.details-container h3 {
+    color: white;
+}
+
+.details-container p {
+    color:  rgb(197, 181, 181);
+}
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+/* ???????????????????????????????????????? */
+/* ???????????????????????????????????????? */
+/* ???????????????????????????????????????? */
+
+/* ???????????????????????????????????????? */
+/* ???????????????????????????????????????? */
+/* ???????????????????????????????????????? */
+/* ???????????????????????????????????????? */
+.profile-pic2 {
+    height: 600px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.text-container p {
+    color: rgb(197, 181, 181);
+}
+
+/* * Experience Section */
+
+#experience {
+    position: relative;
+
+}
+
+.experience-sub-title {
+    color: white;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+
+article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .social-icons {
+    cursor: default;
+}
+
+/* * PROJECTS SECTION */
+
+#projects {
+    position: relative;
+}
+
+.color-container {
+    border: rgb(163, 163, 163);
+    /* background: rgb(250, 250, 250); */
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 300px;
+    height: 500px;
+}
+
+.project-title {
+    margin: 1rem;
+    color:white;
+}
+
+.projectdesc-list {
+    color: wheat;
+    margin-left: 4%;
+    text-align: left;
+    padding-left: 20px; /* Add padding to indent list items */
+}
+
+.projectdesc-list li {
+    margin-top: 2%;
+    list-style-type: disc; /* Add bullet points to list items */
+}
+
+
+#first-li-item {
+    margin-top: 2%;
+}
+.project-description {
+    width: 1000px;
+    margin-left: 5rem;
+    color: wheat;
+}
+
+.project-description2 {
+    width: 1000px;
+    margin-right: 5rem;
+    color: wheat;
+}
+
+.details-container2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-btn {
+    color: black;
+    border-color: brown;
+}
+
+.projectsbtn {
+    margin: 1rem;
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.projectsbtn{
+    border: darkblue 0.1rem solid;
+}
+
+.rprojectsbtn:hover{
+    cursor: pointer;
+}
+
+.projectsbtn:hover {
+    background-color: rgb(8, 69, 122);
+    color: snow;
+}
+
+
+
+
+/* * CONTACT SECTION */
+
+#contact {
+    /* background-color: rgb(74, 72, 72); */
+    height: 60vh;
+}
+
+.contact-icon {
+    cursor: default;
+    height: 2rem;
+}
+
+
+
+
+.title-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid blanchedalmond;
+}
+
+
+.section-containers {
+    height: 35vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.section-container1,
+.section-container2 {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    /* border: 1px solid #ccc; */
+    /* box-sizing: border-box; */
+    width: 100%;
+}
+.section-container1 {
+    height: auto; /* Remove the fixed height */
+    /* background-color: aquamarine; */
+
+}
+
+.form-container {
+    flex: 1; /* Occupy remaining vertical space */
+    padding: 10px;
+    width: 100%;
+}
+
+
+.form-container {
+flex: 1;
+width: 100%;
+}
+
+label {
+    color: lightslategray;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    /* background-color: red; */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.projectsbtn1 {
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 0.5rem;
+    width: 8rem;
+    border-radius: 1rem;
+}
+
+.projectsbtn1{
+    border: darkblue 0.1rem solid;
+}
+
+.rprojectsbtn1:hover{
+    cursor: pointer;
+}
+
+.projectsbtn1:hover {
+    background-color: rgb(8, 69, 122);
+    color: snow;
+}
+
+/* *FOTER SECTION */
+
+footer {
+    height: 10vh;
+    margin: 2rem ;
+    border-top: 2px solid blanchedalmond;
+    /* background-color: cadetblue; */
+}
+
+  footer p {
+    text-align: center;
+    align-self: flex-end;
+    padding: 1rem; 
+    color: rgb(144, 141, 141); 
+  }
+
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.wrapper {
+    display: inline-flex;
+}
+
+.wrapper .icon {
+    margin: 0 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon span {
+    display: block;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon span i {
+    line-height: 60px;
+    font-size: 25px;
+}
+
+.wrapper .icon .tooltip {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    color: #fff;
+    padding: 10px 18px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -70px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.icon .tooltip:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover span {
+    color: #fff;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .youtube:hover span,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip:before {
+    background: #c4302b;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip:before {
+    background: #e1306c;
+}
+
+
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before {
+    background: #333;
+}
+
+.wrapper .linkdeln:hover span,
+.wrapper .linkdeln:hover .tooltip,
+.wrapper .linkdeln:hover .tooltip:before {
+    background: #0e76a8;
+}
+
+
+/* Center the icons within the "Hello" container */
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10%;
+}
+
+
+/* ?????????? */
+/* ?????????? */
+/* ?????????? */
+/* ?????????? */
+/* ?????????? */
+
+/* My additional fancy css  */
+
+
+.arrow-button {
+    display: flex;
+    color: #39c0f5;
+    background-color: rgb(57, 56, 56);
+    padding: 10px 16px;
+    border-radius: 20px;
+    transition: all .3s ease;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10%;
+}
+
+.arrow-button>.arrow {
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #1999d0;
+    border-bottom: 2px solid #1999d0;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 6px;
+    transition: all .3s ease;
+}
+
+.arrow-button>.arrow::before {
+    display: block;
+    background-color: currentColor;
+    width: 3px;
+    transform-origin: bottom right;
+    height: 2px;
+    position: absolute;
+    opacity: 0;
+    bottom: calc(-2px / 2);
+    transform: rotate(45deg);
+    transition: all .3s ease;
+    content: "";
+    right: 0;
+}
+
+.arrow-button:hover>.arrow {
+    transform: rotate(-45deg) translate(4px, 4px);
+    border-color: text-hover-color;
+}
+
+.arrow-button:hover>.arrow::before {
+    opacity: 1;
+    width: 8px;
+}
+
+.arrow-button:hover {
+    background-color: #000a0c;
+    color: #fff;
+}
+
+/* Carousel Section  */
+
+#skill-carousel {
+    /* background-color: red; */
+    height: 40vh;
+}
+
+.carousel_container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+/* ??????????????????????? */
+/* ??????????????????????? */
+/* ??????????????????????? */
+/* ??????????????????????? */
+/* ??????????????????????? */
+/* ??????????????????????? */
+.carousel_container .slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    z-index: -1;
+    opacity: 0;
+}
+/* ??????????????????????? */
+/* ??????????????????????? */
+/* ??????????????????????? */
+/* ??????????????????????? */
+/* ??????????????????????? */
+/* ??????????????????????? */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 99;
+    box-shadow: 0px 0px 105px -35px rgba(10, 33, 243, 3.75);
+}
+
+.slide.prev {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(-125%, -50%);
+}
+
+.slide.next {
+    z-index: 2;
+    opacity: 8.25;
+    transform: translate(25%, -50%);
+}
+
+.carousel_container .button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 275px;
+    z-index: 100;
+}
+
+.button-container .button {
+    color: #39c0f5;
+    font-size: 32px;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.75;
+    transition: all 300ms ease-in-out;
+}
+
+.button-container .button:hover {
+    opacity: 1;
+}
+
+.button-container .button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: -99;
+}
+
+.button-container .button:nth-child(1) {
+    float: left;
+}
+
+.button-container .button:nth-child(2) {
+    float: right;
+}
+
+
+
+.experienceTitle {
+    font-size: 3rem;
+    text-align: center;
+    font-size: 36px;
+    color: #0b5380; /* Slightly darker blue shade */
+    animation: flicker 5s infinite;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.2;
+    }
+    5% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    15% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    25% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.6;
+    }
+    35% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! */
+
+/* *SCROLLING TEXT LINE (EXPEREINCE PAGE)* */
+
+  /* Customize the banner's appearance */
+  .scrolling-banner {
+    margin-top: 4%;
+    /* background-color: #ff9900; */
+    color: #fff;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-family: 'Share Tech', sans-serif;
+}
+
+
+/* *SCROLLING TEXT LINE (EXPEREINCE PAGE)* */
+
+ /* styles.css */
+
+/* Profile section styles */
+.profile-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #f7f7f7;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 20px;
+}
+
+.profile-intro {
+    flex: 1;
+    text-align: left;
+}
+
+.profile-name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-title {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.profile-description {
+    font-size: 18px;
+    color: #444;
+}
+
+/* Social media icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #0077b5; /* LinkedIn blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:last-child {
+    margin-right: 0;
+}
+
+.social-icon:hover {
+    color: #005f95; /* Darker LinkedIn blue on hover */
+}
+
+/* !!!!!!!!!! */
+/* !!!!!!!!!! */
+/* !!!!!!!!!! */
+
+/* Reset some default styles for consistency */
+
+
+header {
+    text-align: center;
+    /* background-color: #333; */
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 6%;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.skill {
+    text-align: center;
+    padding: 20px;
+    height: 200px;
+    width: 200px;
+    /* background: rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(10px);  */
+    opacity: 0.9; 
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+.skill img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.skill h2 {
+    color: lightslategray;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    color: lightgray;
+    font-size: 16px;
+}
